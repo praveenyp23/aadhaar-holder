@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<host-apdu-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:description="@string/service_desc"
+    android:requireDeviceUnlock="false">
+    <!-- ISO 18013-5 AID for mDL/mDoc -->
+    <aid-group
+        android:description="@string/aid_group_desc"
+        android:category="other">
+        <!-- 8-byte ISO 18013-5 mDL AID: A0 00 00 00 24 80 04 00 -->
+        <aid-filter android:name="A000000024800400" />
+    </aid-group>
+</host-apdu-service>

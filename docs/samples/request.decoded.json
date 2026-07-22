@@ -1,0 +1,86 @@
+{
+  "jws_header": {
+    "x5c": [
+      "MIIByjCCAXCgAwIBAgIJAK2bzgqFqB8xMAoGCCqGSM49BAMCMFoxCzAJBgNVBAYTAklOMRkwFwYDVQQKDBBBYWRoYWFyIFZlcmlmaWVyMRUwEwYDVQQLDAxaS1AgVmVyaWZpZXIxGTAXBgNVBAMMEGFhZGhhYXItdmVyaWZpZXIwHhcNMjYwNzIyMTE0NzM1WhcNMzYwNzE5MTE0NzM1WjBaMQswCQYDVQQGEwJJTjEZMBcGA1UECgwQQWFkaGFhciBWZXJpZmllcjEVMBMGA1UECwwMWktQIFZlcmlmaWVyMRkwFwYDVQQDDBBhYWRoYWFyLXZlcmlmaWVyMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEXMecU2y5A052aCi5z6fnpf3vEd1LW2RZA1yE5XmaeqFQ1DiT5RNYWzNWIcQu2qIZmjX5Y6+m8EBVZf6Mu4yLH6MfMB0wGwYDVR0RBBQwEoIQYWFkaGFhci12ZXJpZmllcjAKBggqhkjOPQQDAgNIADBFAiB1PXAe4vR6EqlPBguygaRtGjtTqI0hG9dqI4jr3G7XZAIhAKWZt1UNs2g5lajJGvjaccgZYq7WsGytZKn4P6TNpd/m"
+    ],
+    "typ": "oauth-authz-req+jwt",
+    "alg": "ES256"
+  },
+  "jws_payload": {
+    "response_type": "vp_token",
+    "response_mode": "direct_post.jwt",
+    "client_id": "x509_san_dns:aadhaar-verifier",
+    "nonce": "ea5edc81e3a9b90c709fbf7ce4624d59",
+    "response_uri": "https://oid4vp-relay.praveen-mdoc.workers.dev/resp/9d7895aa11e55fff042cc1723f5bd78b",
+    "client_metadata": {
+      "jwks": {
+        "keys": [
+          {
+            "kty": "EC",
+            "use": "enc",
+            "crv": "P-256",
+            "kid": "K4U39Gc1a5-cA04IsbWi3tlPfNjK8dNhg43FhSDNXDM",
+            "x": "lZweR_wfbIeDb7sjmdiH-k6dXApoT7R5GSq9zJzctFQ",
+            "y": "tkLtx7M4sDX0tL53JDLBcpIq46EbL9zDNn3slrLGhio",
+            "alg": "ECDH-ES"
+          }
+        ]
+      },
+      "encrypted_response_enc_values_supported": [
+        "A256GCM"
+      ],
+      "vp_formats": {
+        "mso_mdoc_zk": {}
+      }
+    },
+    "dcql_query": {
+      "credentials": [
+        {
+          "id": "aadhaar_zk",
+          "format": "mso_mdoc_zk",
+          "meta": {
+            "doctype_value": "in.gov.uidai.aadhaar.1",
+            "zk_system_type": [
+              {
+                "system": "longfellow-libzk-v1",
+                "id": "longfellow-libzk-v1_6_4_4283_2945_c70b5f44a1365c53847eb8948ad5b4fdc224251a2bc02d958c84c862823c49d6",
+                "version": 6,
+                "circuit_hash": "c70b5f44a1365c53847eb8948ad5b4fdc224251a2bc02d958c84c862823c49d6",
+                "num_attributes": 4,
+                "block_enc_hash": 4283,
+                "block_enc_sig": 2945
+              }
+            ]
+          },
+          "claims": [
+            {
+              "path": [
+                "in.gov.uidai.aadhaar.1",
+                "age_above18"
+              ]
+            },
+            {
+              "path": [
+                "in.gov.uidai.aadhaar.1",
+                "age_above60"
+              ]
+            },
+            {
+              "path": [
+                "in.gov.uidai.aadhaar.1",
+                "age_above50"
+              ]
+            },
+            {
+              "path": [
+                "in.gov.uidai.aadhaar.1",
+                "age_above75"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "signature_bytes": 64
+}

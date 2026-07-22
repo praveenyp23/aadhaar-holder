@@ -1,0 +1,43 @@
+# Built application files
+*.apk
+*.aar
+*.ap_
+*.aab
+
+# Gradle
+.gradle/
+build/
+*/build/
+
+# Kotlin
+.kotlin/
+*.class
+
+# Local configuration (create locally: sdk.dir=/path/to/Android/sdk)
+local.properties
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# OS
+.DS_Store
+
+# Signing keys — NEVER commit
+*.jks
+*.keystore
+
+# Android Studio scratch
+/captures
+.externalNativeBuild
+.cxx
+
+# Backups / scratch
+*.corrupted
+*.bak
+
+# Dev/testing scratch — not part of the app (internal endpoints, dummy payloads)
+*.postman_collection.json
+request_dummy.json

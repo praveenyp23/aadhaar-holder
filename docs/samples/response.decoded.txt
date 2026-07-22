@@ -1,0 +1,33 @@
+# Decoded vp_token  →  base64url-decode("aadhaar_zk")  →  CBOR DeviceResponse
+# (proof is 364228 bytes of binary, shown by length + full hex prefix; every other field complete)
+
+DeviceResponse = {
+  "version": "1.0",
+  "zkDocuments": [
+    {
+      "proof": h'bc9f0966466f32a2a95092491bc183475684f74a67e7fca3d6ac6b6a6b8cc942 ... (364228 bytes)',
+      "documentData": 24(<< {
+        "zkSystemId": "longfellow-libzk-v1_7_4_4415_4096_5aebdaaafe17296a3ef3ca6c80c6e7505e09291897c39700410a365fb278e460",
+        "docType":    "in.gov.uidai.aadhaar.1",
+        "timestamp":  0("2026-07-22T12:51:39Z"),
+        "issuerSigned": {
+          "in.gov.uidai.aadhaar.1": [
+            { "elementIdentifier": "age_above18", "elementValue": "Yes" },
+            { "elementIdentifier": "age_above60", "elementValue": "No" },
+            { "elementIdentifier": "age_above50", "elementValue": "No" },
+            { "elementIdentifier": "age_above75", "elementValue": "No" }
+          ]
+        },
+        "deviceSigned": {},
+        "msoX5chain": h'3082029230820237a00302010202110097cdb37ec8a2d292ed88f5a4ea4213f5300a06082a8648ce3d040302306c310b300906035504061302494e3131302f060355040a1328556e69717565204964656e74696669636174696f6e20417574686f72697479206f6620496e646961310d300b060355040b130449414341311b3019060355040313125549444149204941434120526f6f74204341301e170d3236303732323132343532385a170d3237303732323132353032385a308186310b300906035504061302494e3131302f060355040a1328556e69717565204964656e74696669636174696f6e20417574686f72697479206f6620496e64696131183016060355040b130f446f63756d656e74205369676e6572312a3028060355040313215549444149204453202d20696e2e676f762e75696461692e616164686161722e313059301306072a8648ce3d020106082a8648ce3d0301070342000426a1c230db9ab8d95b281f02e91f76bac25b27de19697e0d4fc1c66c40b0e098090dbb96e35c18ca26d576b45390627428a60d1bad49c6b098d078c5648d133da3819e30819b300e0603551d0f0101ff040403020780300c0603551d130101ff0402300030290603551d0e04220420fe79277615f7f0e93ba972c41a1aaf09ae7e6d47ed71240574ea5c996e1aaa13302b0603551d23042430228020a1dcc538220d89a36b1778735caa258c3163717310cae047755ea3cb4fd8e9273023060728818c5d05010604181316696e2e676f762e75696461692e616164686161722e31300a06082a8648ce3d0403020349003046022100f6c00c1a40d4a6006bd968c6c98884ebb2b5269741b1f2ca9844be2fbba0f7290221008e6cfd0f82d42e2c23d7bed9023e60481587228b676327ab6d66baf94b557c3f'
+      } >>)
+    }
+  ],
+  "status": 0
+}
+
+# msoX5chain (the Document Signer certificate) decodes to:
+#   subject: C=IN, O=Unique Identification Authority of India, OU=Document Signer,
+#            CN=UIDAI DS - in.gov.uidai.aadhaar.1
+#   issuer : C=IN, O=Unique Identification Authority of India, OU=IACA, CN=UIDAI IACA Root CA
+#   key    : EC P-256;  signature algorithm: ecdsa-with-SHA256

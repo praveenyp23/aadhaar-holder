@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Aadhaar Holder</string>
+    <string name="service_desc">ISO 18013-5 mDoc HCE Service</string>
+    <string name="aid_group_desc">ISO 18013-5 mDL/mDoc Transfer</string>
+    
+    <!-- NFC Activity -->
+    <string name="nfc_activity_label">NFC Credential Transfer</string>
+    <string name="nfc_ndef_service_description">mDoc Holder</string>
+    <string name="nfc_ndef_service_aid_group_description">ISO/IEC 18013-5:2021 NFC engagement</string>
+    
+    <!-- Main Screen -->
+    <string name="welcome_title">mDoc Holder App</string>
+    <string name="import_mdoc_button">Import mDoc</string>
+    <string name="view_mdoc_button">View mDoc</string>
+    <string name="enable_nfc_button">Enable NFC Transfer</string>
+    <string name="disable_nfc_button">Disable NFC Transfer</string>
+    <string name="no_mdoc_message">No mDoc imported yet. Click Import to add your credential.</string>
+    <string name="mdoc_loaded">mDoc loaded successfully!</string>
+    <string name="nfc_enabled">NFC transfer enabled. Hold near reader.</string>
+    <string name="nfc_disabled">NFC transfer disabled.</string>
+    
+    <!-- mDoc Details -->
+    <string name="mdoc_details_title">mDoc Details</string>
+    <string name="doc_type">Document Type:</string>
+    <string name="issuer">Issuer:</string>
+    <string name="issued_date">Issued Date:</string>
+    <string name="expiry_date">Expiry Date:</string>
+    
+    <!-- NFC Status -->
+    <string name="nfc_status">NFC Status:</string>
+    <string name="nfc_not_available">NFC not available on this device</string>
+    <string name="nfc_disabled_device">NFC is disabled. Please enable it in Settings.</string>
+    <string name="nfc_ready">NFC Ready</string>
+    <string name="nfc_transferring">Transferring data…</string>
+    <string name="nfc_transfer_complete">Transfer complete!</string>
+    <string name="nfc_transfer_failed">Transfer failed. Please try again.</string>
+    
+    <!-- Import -->
+    <string name="import_title">Import mDoc</string>
+    <string name="paste_mdoc">Paste mDoc (CBOR hex or Base64):</string>
+    <string name="import_from_file">Import from File</string>
+    <string name="import_button">Import</string>
+    <string name="cancel_button">Cancel</string>
+    
+    <!-- Errors -->
+    <string name="error_no_nfc">This device does not support NFC</string>
+    <string name="error_invalid_mdoc">Invalid mDoc format</string>
+    <string name="error_import_failed">Failed to import mDoc</string>
+</resources>

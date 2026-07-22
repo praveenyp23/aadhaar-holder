@@ -1,0 +1,5 @@
+# Online session 9d7895aa11e55fff042cc1723f5bd78b — OpenID4VPHandover (encrypted response)
+# HandoverInfo = CBOR([ client_id, nonce, jwk_thumbprint, response_uri ])
+jwk_thumbprint       = 2b8537f467356b9f9c034e08b1b5a2ded94f7cd8caf1d361838dc58520cd5c33
+SHA256(HandoverInfo) = 74b9724579a31b3c9bec739f17b8c264790c9b7bcb2db099e6f7794d36ffa4c9
+SessionTranscript    = 83f6f682714f70656e494434565048616e646f766572582074b9724579a31b3c9bec739f17b8c264790c9b7bcb2db099e6f7794d36ffa4c9

@@ -1,0 +1,15 @@
+# NFC-engaged ZK presentation (holder side) — NFC delivers the OPENID4VP://connect URL, then Bluetooth
+# carries the signed request + proof. Holder verifies the request signature and pins the cert (as BLE).
+D ZK_NFC       : NFC read url=OPENID4VP://connect?name=Aadhaar+Verifier&key=<64 hex X25519 key>
+D ZK_BLE_WALLET: mtu=517
+D ZK_BLE_WALLET: servicesDiscovered status=0
+D ZK_BLE_WALLET: read REQUEST_SIZE len=4
+D ZK_BLE_WALLET: read REQUEST len=509 (expected=1756)   # signed request (x5c), paged
+D ZK_BLE_WALLET: read REQUEST len=509 (expected=1756)
+D ZK_BLE_WALLET: read REQUEST len=509 (expected=1756)
+D ZK_BLE_WALLET: read REQUEST len=229 (expected=1756)
+D ZK_BLE_WALLET: Request signature verified and verifier certificate pinned OK
+D MDOC_ZK      : Selected circuit 'longfellow-libzk-v1_7_4_4415_4096_5aebda…e460' for 4 attribute(s)
+D MDOC_ZK      : ZK proof generated: 364804 bytes
+D ZK_BLE_WALLET: submitting 365976 bytes in 721 chunks (mtu=517)
+D ZK_BLE_WALLET: finish success=true

@@ -1,0 +1,14 @@
+# Bluetooth ZK presentation (holder side) — signed request verified + certificate pinned
+# Verifier signs the OpenID4VP request (ES256 + x5c); holder verifies the signature and pins the cert.
+D ZK_BLE_WALLET: mtu=517
+D ZK_BLE_WALLET: servicesDiscovered status=0
+D ZK_BLE_WALLET: read REQUEST_SIZE len=4
+D ZK_BLE_WALLET: read REQUEST len=509 (expected=1756)   # signed request (x5c), paged
+D ZK_BLE_WALLET: read REQUEST len=509 (expected=1756)
+D ZK_BLE_WALLET: read REQUEST len=509 (expected=1756)
+D ZK_BLE_WALLET: read REQUEST len=229 (expected=1756)
+D ZK_BLE_WALLET: Request signature verified and verifier certificate pinned OK
+D MDOC_ZK      : Selected circuit 'longfellow-libzk-v1_7_4_4415_4096_5aebda…e460' for 4 attribute(s)
+D MDOC_ZK      : ZK proof generated: 364516 bytes
+D ZK_BLE_WALLET: submitting 365688 bytes in 720 chunks (mtu=517)
+D ZK_BLE_WALLET: finish success=true

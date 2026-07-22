@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Holder App"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Transfer Method"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/transfer_method_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/radio_nfc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NFC Transfer"
+                android:paddingVertical="8dp" />
+
+            <RadioButton
+                android:id="@+id/radio_ble"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BLE Transfer"
+                android:paddingVertical="8dp" />
+
+            <RadioButton
+                android:id="@+id/radio_qr_ble"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="QR + BLE Transfer"
+                android:paddingVertical="8dp"
+                android:checked="true" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/start_engagement_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Transfer"
+            android:layout_marginBottom="16dp"
+            android:padding="16dp" />
+
+        <TextView
+            android:id="@+id/status_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status: Not engaged"
+            android:textSize="14sp"
+            android:layout_marginBottom="16dp"
+            android:padding="12dp"
+            android:background="@android:color/darker_gray"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/qr_code_image"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            android:scaleType="fitCenter"
+            android:contentDescription="QR Code for Device Engagement" />
+
+    </LinearLayout>
+
+</ScrollView>
